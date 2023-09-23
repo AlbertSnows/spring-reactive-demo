@@ -27,6 +27,11 @@ public class StudentController {
     return service.findAll();
   }
 
+  @GetMapping("/hi")
+  public Mono<String> sayHi() {
+    return Mono.just("Hello!");
+  }
+
   @GetMapping("/{id}")
   public Mono<Student> findById(@PathVariable Long id) {
     return service.findById(id);

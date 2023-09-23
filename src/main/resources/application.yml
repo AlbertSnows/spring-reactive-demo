@@ -1,9 +1,11 @@
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/spring_reactive
-    username: alibou
-    password: alibou
+    url: r2dbc:postgresql://localhost:5432/spring_reactive_t1
+    username: postgres
+    password: password
   flyway:
-    url: jdbc:postgresql://localhost:5432/spring_reactive
-    user: alibou
-    password: alibou
+    url: jdbc:postgresql://localhost:5432/spring_reactive_t1
+    user: postgres
+    password: password
+    baselineOnMigrate: true
+#    locations: filesystem:src/main/resources/db/migration
